@@ -55,7 +55,7 @@ function Body() {
           <img
             src={`http://openweathermap.org/img/w/${data?.weather[0]?.icon}.png`}
             alt=""
-            className="bg-white rounded-md w-1/3 max-sm:h-[80%] lg:w-[50%] items-center flex justify-center mt-3"
+            className="bg-white rounded-md w-1/3 max-sm:h-[65%] lg:w-[50%] items-center flex justify-center mt-3"
           />
         </div>
       </div>
@@ -94,17 +94,17 @@ function Body() {
             <h2 className="mb-5">Sunrise & Sunset</h2>
             <div className="flex justify-between lg:justify-around">
               <div className="">
-                <div className="flex items-center">
-                  <FaRegSun className=" scale-150 mr-6" />
+                <div className="flex items-center gap">
+                  <FaRegSun className=" scale-150 mr-3" />
                   <div>
                     <p>sunrise</p>
                     <p className="text-xl">{sunriseTime} AM</p>
                   </div>
                 </div>
               </div>
-              <div className="sunset">
+              <div>
                 <div className="flex  items-center">
-                  <IoMoonSharp className=" sunset-icon scale-150 mr-6" />
+                  <IoMoonSharp className=" sunset-icon scale-150 mr-3" />
                   <div>
                     <p>sunset</p>
                     <p className="text-xl ">{sunsetTime} PM</p>
@@ -115,21 +115,21 @@ function Body() {
           </div>
         </div>
         <div className="flex flex-wrap justify-around mt-5 gap-2">
-          <div className="w-[145px] bg-black rounded-xl p-5 items-center flex-col flex gap-4">
+          <div className="min-w-[135px] bg-black rounded-xl p-5 items-center flex-col flex gap-4">
             <h2 className="">Humidity</h2>
             <div className=" text-xl flex items-center gap-2">
               <MdOpacity className="" />
               <span>{data?.main?.humidity} %</span>
             </div>
           </div>
-          <div className="w-[145px] bg-black rounded-xl  p-5 items-center flex-col flex gap-4">
+          <div className="min-w-[135px] bg-black rounded-xl  px-3 py-5 items-center flex-col flex gap-4">
             <h2 className="">Pressure</h2>
             <div className="text-xl flex items-center gap-2">
               <GiPressureCooker className="" />
               <span>{data?.main?.pressure} Pa</span>
             </div>
           </div>
-          <div className="w-[145px] bg-black rounded-xl p-5 items-center flex-col flex gap-4">
+          <div className="min-w-[135px] bg-black rounded-xl p-5 items-center flex-col flex gap-4">
             <h2 className="">Wind Speed</h2>
             <div className="text-xl flex items-center gap-2">
               <WiStrongWind className="" />
@@ -139,21 +139,21 @@ function Body() {
               </span>
             </div>
           </div>
-          <div className="w-[145px] bg-black rounded-xl  p-5  items-center flex-col flex gap-4">
+          <div className="min-w-[135px] bg-black rounded-xl  p-5  items-center flex-col flex gap-4">
             <h2 className="">Visibility</h2>
             <div className="text-xl flex items-center gap-2">
               <FaEye className="" />
               <span>{data?.visibility / 1000} Km</span>
             </div>
           </div>
-          <div className="w-[145px] bg-black rounded-xl p-5  items-center flex-col flex gap-4">
+          <div className="min-w-[135px] bg-black rounded-xl p-5  items-center flex-col flex gap-4">
             <h2 className="">Max Temp.</h2>
             <div className="text-xl flex items-center gap-5">
               <FaTemperatureArrowUp className=" " />
               <span>{~~data?.main?.temp_max} &deg;c</span>
             </div>
           </div>
-          <div className="w-[145px] bg-black rounded-xl  p-5  items-center flex-col flex gap-4">
+          <div className="min-w-[135px] bg-black rounded-xl  p-5  items-center flex-col flex gap-4">
             <h2 className="">Feels Like</h2>
             <div className="text-xl flex items-center gap-2">
               <FaTemperatureHigh className="" />

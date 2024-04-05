@@ -20,6 +20,7 @@ const handleOnClick=()=>{
   if(text.length>0){
     setCity(text);
     setText("");
+    setVisible(false);
     setBalnkInp(false)
   }
   else{
